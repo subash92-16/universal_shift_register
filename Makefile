@@ -26,7 +26,7 @@ SIM?=RTL
 CARAVEL_LITE?=1
 
 # PDK switch varient
-export PDK?=sky130A
+export PDK?=sky130B
 #export PDK?=gf180mcuC
 export PDKPATH?=$(PDK_ROOT)/$(PDK)
 
@@ -35,8 +35,8 @@ export PDKPATH?=$(PDK_ROOT)/$(PDK)
 ifeq ($(PDK),sky130A)
 	SKYWATER_COMMIT=f70d8ca46961ff92719d8870a18a076370b85f6c
 	export OPEN_PDKS_COMMIT?=0059588eebfc704681dc2368bd1d33d96281d10f
-	export OPENLANE_TAG?=2022.11.19
-	MPW_TAG ?= mpw-8c
+	export OPENLANE_TAG?=2022.10.20
+	MPW_TAG ?= mpw-7d
 
 ifeq ($(CARAVEL_LITE),1)
 	CARAVEL_NAME := caravel-lite
@@ -53,8 +53,8 @@ endif
 ifeq ($(PDK),sky130B)
 	SKYWATER_COMMIT=f70d8ca46961ff92719d8870a18a076370b85f6c
 	export OPEN_PDKS_COMMIT?=0059588eebfc704681dc2368bd1d33d96281d10f
-	export OPENLANE_TAG?=2022.11.19
-	MPW_TAG ?= mpw-8c
+	export OPENLANE_TAG?=2022.10.20
+	MPW_TAG ?= mpw-7d
 
 ifeq ($(CARAVEL_LITE),1)
 	CARAVEL_NAME := caravel-lite
@@ -70,13 +70,13 @@ endif
 
 ifeq ($(PDK),gf180mcuC)
 
-	MPW_TAG ?= gfmpw-0b
+	MPW_TAG ?= gfmpw-0a
 	CARAVEL_NAME := caravel
 	CARAVEL_REPO := https://github.com/efabless/caravel-gf180mcu
 	CARAVEL_TAG := $(MPW_TAG)
 	#OPENLANE_TAG=ddfeab57e3e8769ea3d40dda12be0460e09bb6d9
 	export OPEN_PDKS_COMMIT?=0059588eebfc704681dc2368bd1d33d96281d10f
-	export OPENLANE_TAG?=2022.11.19
+	export OPENLANE_TAG?=2022.10.20
 
 endif
 
