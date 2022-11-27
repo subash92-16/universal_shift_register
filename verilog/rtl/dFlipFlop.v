@@ -15,7 +15,7 @@
 // SPDX-FileContributor: Subash Polisetty (subash92.16@gmail.com)
 
 
-module dFilpFlop(
+module dFlipFlop(
     input din,
     input clk,
     input rst,

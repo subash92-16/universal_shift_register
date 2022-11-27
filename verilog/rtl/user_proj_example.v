@@ -75,9 +75,9 @@ module user_proj_example #(
             .clk(wb_clk_i),                //input clock
             .reset(wb_rst_i),              //input reset
 			.dataIn(io_in[15:8]),          //input data, where data[0] can be used as serial input with ctrlIn = 11
-            .ctrlIn(io_in[1:0]),           //input to select the type of operation
-            .regOut(io_out[7:0]),          //output of the shift register
-            .outValid(io_oeb)
+            .ctrlIn(io_in[6:5]),           //input to select the type of operation
+            .regOut(io_out[37:30]),        //output of the shift register
+            .outValid(io_oeb[29])
     );
 
 endmodule
