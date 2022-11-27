@@ -21,7 +21,7 @@ module universal_shift_register #(
     input             clk,
     input             reset,
     input  [BITS-1:0] dataIn,
-	input  [BITS-1:0] ctrlIn,
+    input  [1:0] ctrlIn,
     output [BITS-1:0] regOut,
     output            outValid
 );
@@ -46,7 +46,7 @@ module universal_shift_register #(
         .muxOut(selOut1)
     );
 
-    dFilpFlop D1 (
+    dFlipFlop D1 (
         .clk(clk),
         .rst(reset),
         .din(selOut1),
@@ -60,7 +60,7 @@ module universal_shift_register #(
         .muxOut(selOut2)
     );
 
-    dFilpFlop D2 (
+    dFlipFlop D2 (
         .clk(clk),
         .rst(reset),
         .din(selOut2),
@@ -74,7 +74,7 @@ module universal_shift_register #(
         .muxOut(selOut3)
     );
 
-    dFilpFlop D3 (
+    dFlipFlop D3 (
         .clk(clk),
         .rst(reset),
         .din(selOut3),
@@ -88,7 +88,7 @@ module universal_shift_register #(
         .muxOut(selOut4)
     );
 
-    dFilpFlop D4 (
+    dFlipFlop D4 (
         .clk(clk),
         .rst(reset),
         .din(selOut4),
@@ -102,7 +102,7 @@ module universal_shift_register #(
         .muxOut(selOut5)
     );
 
-    dFilpFlop D5 (
+    dFlipFlop D5 (
         .clk(clk),
         .rst(reset),
         .din(selOut5),
@@ -116,7 +116,7 @@ module universal_shift_register #(
         .muxOut(selOut6)
     );
 
-    dFilpFlop D6 (
+    dFlipFlop D6 (
         .clk(clk),
         .rst(reset),
         .din(selOut6),
@@ -130,7 +130,7 @@ module universal_shift_register #(
         .muxOut(selOut7)
     );
 
-    dFilpFlop D7 (
+    dFlipFlop D7 (
         .clk(clk),
         .rst(reset),
         .din(selOut7),
@@ -144,7 +144,7 @@ module universal_shift_register #(
         .muxOut(selOut8)
     );
 
-    dFilpFlop D8 (
+    dFlipFlop D8 (
         .clk(clk),
         .rst(reset),
         .din(selOut8),
